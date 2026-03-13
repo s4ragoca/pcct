@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parintins Health Analytics | Inteligência de Dados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="page-header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <div class="logo"><span aria-hidden="true">📊</span> PARINTINS.HEALTH</div>
+      <div class="nav-actions">
+        <button id="menu-btn" class="menu-btn" type="button" aria-label="Abrir menu" aria-controls="primary-menu" aria-expanded="false">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+        <button id="theme-btn" class="theme-btn" type="button" aria-label="Alternar tema">🌙</button>
+      </div>
+      <div class="nav-links" id="primary-menu">
+        <a href="#home" class="nav-link active" aria-current="page">Visão Geral</a>
+        <a href="#dashboards" class="nav-link" aria-current="false">Dashboards</a>
+        <a href="#analises" class="nav-link" aria-current="false">Insights Estatísticos</a>
+        <a href="#doencas" class="nav-link" aria-current="false">Atlas Epidemiológico</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="section active" aria-labelledby="home-title">
+      <div class="hero">
+        <h1 id="home-title" class="hero-title">Dados que salvam <span class="hero-highlight">vidas.</span></h1>
+        <p class="hero-description">Transformamos informações complexas de saneamento, clima e saúde em decisões estratégicas para o município de Parintins.</p>
+        <button id="explore-btn" class="btn-cta" type="button">Explorar Painéis</button>
+      </div>
+
+      <div class="container">
+        <div class="grid-2">
+          <article class="card">
+            <div class="insight-badge badge-primary">Impacto Social</div>
+            <h2>Inteligência a serviço da saúde</h2>
+            <p>Nossa plataforma resolve um gargalo histórico na região amazônica: a dispersão de dados. Cruzamos informações de bases como o SINAN e o INMET para prever surtos e identificar zonas de risco com precisão cirúrgica.</p>
+          </article>
+          <article class="card">
+            <div class="insight-badge badge-accent">Engenharia</div>
+            <h2>Stack de Dados Moderna</h2>
+            <p>Utilizamos um fluxo robusto de <strong>ETL (Extract, Transform, Load)</strong> em Python para processar milhares de registros mensais. O resultado são modelos estatísticos que correlacionam o clima com o bem-estar da população.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboards" class="section" aria-labelledby="dashboards-title">
+      <div class="container with-top">
+        <header class="text-center mb-3">
+          <h2 id="dashboards-title">Monitoramento em Tempo Real</h2>
+          <p>Explore as camadas de dados georreferenciados e séries temporais.</p>
+        </header>
+        <div class="db-container">
+          <iframe title="Dashboard interativo de monitoramento epidemiológico" src="https://app.powerbi.com/view?r=eyJrIjoiZTdkY2I2MjAtMjNlMi00OGQ0LThkODYtYjdiNjI2NDk3MDg5IiwidCI6ImQ3ZGNiNWIxLWNlMDAtNDgwOC04YmQxLWU3N2ZkYmY4ZDMxNyJ9" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="analises" class="section" aria-labelledby="analises-title">
+      <div class="container with-top">
+        <header class="text-left mb-4">
+          <h2 id="analises-title" class="section-title">Insights Estatísticos</h2>
+          <p class="section-description">Análise técnica profunda baseada no coeficiente de Pearson (r). Os dados revelam <strong>correlações moderadas</strong> que sustentam a necessidade de infraestrutura como política de saúde primária.</p>
+        </header>
+
+        <div class="grid-2">
+          <article class="card correlation-card">
+            <div class="corr-header">
+              <div class="corr-value positive">r = 0.56</div>
+              <div class="insight-badge badge-pos">Moderada Positiva</div>
+            </div>
+            <h3>Sazonalidade e Pluviosidade</h3>
+            <div class="chart-wrapper">
+              <div class="chart-overlay-tag">Dataset: INMET / SINAN</div>
+              <img src="assets/img/grafico_dengue_focado.png" class="chart-img" alt="Gráfico de correlação entre chuva e casos de dengue">
+            </div>
+            <p>A análise confirma que em bairros com <strong>saneamento precário</strong>, a chuva atua como um amplificador biológico. A correlação moderada prova que a infraestrutura de drenagem é tão vital quanto o combate direto ao vetor.</p>
+          </article>
+
+          <article class="card correlation-card">
+            <div class="corr-header">
+              <div class="corr-value negative">r = -0.67</div>
+              <div class="insight-badge badge-neg">Moderada Negativa</div>
+            </div>
+            <h3>Infraestrutura vs. Vetores</h3>
+            <div class="chart-wrapper">
+              <div class="chart-overlay-tag">Dataset: SNIS / SINAN</div>
+              <img src="assets/img/grafico_qualidade_chikungunya.png" class="chart-img" alt="Gráfico de correlação entre qualidade hídrica e chikungunya">
+            </div>
+            <p>A <strong>hidrometração</strong> é o nosso maior insight: onde o abastecimento é regular e medido, o armazenamento inseguro desaparece. A correlação negativa moderada mostra que água na torneira elimina criadouros domésticos.</p>
+          </article>
+        </div>
+
+        <div class="grid-3 mt-2">
+          <article class="card card-small">
+            <strong>Hepatite e Água (-0.53)</strong>
+            <p class="section-description">O acesso à água tratada apresenta relação inversa moderada com a contaminação fecal-oral em Parintins.</p>
+          </article>
+          <article class="card card-small">
+            <strong>Toxoplasmose (-0.59)</strong>
+            <p class="section-description">O monitoramento da rede oficial de abastecimento atua como barreira moderada contra contaminações por oocistos.</p>
+          </article>
+          <article class="card card-small">
+            <strong>Resposta Rápida (Lag = 0)</strong>
+            <p class="section-description">A resposta biológica aos gatilhos climáticos é imediata, exigindo protocolos de vigilância em tempo real.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="doencas" class="section" aria-labelledby="doencas-title">
+      <div class="container with-top">
+        <header class="text-center mb-4">
+          <h2 id="doencas-title">Atlas Epidemiológico</h2>
+          <p>Entenda o comportamento das patologias monitoradas sob a ótica dos fatores socioambientais da região.</p>
+        </header>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="disease-header">
+              <div class="disease-icon icon-dengue" aria-hidden="true">🦟</div>
+              <h3>Dengue</h3>
+            </div>
+            <div class="disease-content">
+              <p>Arbovirose que se aproveita das vulnerabilidades urbanas. Em Parintins, o regime de chuvas amazônicas cria poças em áreas sem drenagem, formando berçários para o mosquito.</p>
+              <ul>
+                <li><strong>Transmissão:</strong> Picada da fêmea do <em>Aedes aegypti</em>.</li>
+                <li><strong>Risco Local:</strong> Alta pluviosidade em zonas com descarte irregular de resíduos.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="disease-header">
+              <div class="disease-icon icon-chik" aria-hidden="true">🌡️</div>
+              <h3>Chikungunya</h3>
+            </div>
+            <div class="disease-content">
+              <p>Conhecida pelas fortes dores articulares. Nossos dados revelam que sua incidência está moderadamente ligada ao hábito de armazenar água de forma insegura quando o abastecimento falha.</p>
+              <ul>
+                <li><strong>Prevenção:</strong> Regularidade no fornecimento de água potável monitorada.</li>
+                <li><strong>Impacto:</strong> Pode causar dores crônicas debilitantes por longos períodos.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="disease-header">
+              <div class="disease-icon icon-hepa" aria-hidden="true">💧</div>
+              <h3>Hepatites Virais (A e E)</h3>
+            </div>
+            <div class="disease-content">
+              <p>Infecções do fígado que funcionam como um termômetro sanitário. Aparecem onde o tratamento de esgoto é inexistente ou a água é consumida sem filtragem biológica.</p>
+              <ul>
+                <li><strong>Vetor:</strong> Contaminação fecal-oral via água ou alimentos.</li>
+                <li><strong>Fator Crítico:</strong> Ingestão de água de fontes vulneráveis ou poços rasos.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="disease-header">
+              <div class="disease-icon icon-lepto" aria-hidden="true">🐀</div>
+              <h3>Leptospirose</h3>
+            </div>
+            <div class="disease-content">
+              <p>Doença bacteriana com picos durante a cheia dos rios. O contato com águas de inundação contaminadas por urina de roedores infectados é a principal via de contágio.</p>
+              <ul>
+                <li><strong>Sazonalidade:</strong> Atrelada ao regime hidrológico e alagamentos urbanos.</li>
+                <li><strong>Gestão:</strong> Depende de drenagem urbana e controle de pragas eficiente.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="disease-header">
+              <div class="disease-icon icon-toxo" aria-hidden="true">🔬</div>
+              <h3>Toxoplasmose</h3>
+            </div>
+            <div class="disease-content">
+              <p>Na Amazônia, a transmissão hídrica é uma via severa. A ingestão de oocistos em água não tratada ou monitorada é um desafio crítico de saúde pública regional.</p>
+              <ul>
+                <li><strong>Monitoramento:</strong> Rigor técnico na filtragem e tratamento da rede oficial.</li>
+                <li><strong>Insight:</strong> Correlação de -0.59 com a qualidade do serviço hídrico local.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="disease-header">
+              <div class="disease-icon icon-leish" aria-hidden="true">🌳</div>
+              <h3>Leishmaniose</h3>
+            </div>
+            <div class="disease-content">
+              <p>Zoonose transmitida pelo mosquito-palha. A urbanização desordenada que avança sobre a mata aproxima os vetores das residências, exigindo vigilância ambiental.</p>
+              <ul>
+                <li><strong>Vetor:</strong> Flebotomíneos presentes em áreas de transição florestal.</li>
+                <li><strong>Cenário:</strong> Bairros periféricos com interface direta com fragmentos de mata.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <h3 class="hero-highlight">PARINTINS.HEALTH</h3>
+      <p>Inteligência de Dados Aplicada à Epidemiologia Amazônica.</p>
+      <div class="people-list">
+        <span class="pill">Gabriel S. de Lima</span>
+        <span class="pill">Ronem M. L. Filho</span>
+        <span class="pill">Rafael Diego B. Soares</span>
+      </div>
+      <p class="footer-note">&copy; 2026 IFAM Parintins. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div id="menu-overlay" class="menu-overlay" aria-hidden="true"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
